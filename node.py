@@ -7,7 +7,7 @@ class Node:
 
     def __init__(self, puzzle=None, image_path=None, g=0, function="brute_force"):
         if image_path == None:
-            self.image_path = "images\\" + random.choice(os.listdir(".\images"))
+            self.image_path = os.path.join("images", random.choice(os.listdir("images")))
         else: self.image_path = image_path
         if puzzle == None:
             self.puzzle = [1,2,3,4,5,6,7,8,0]
